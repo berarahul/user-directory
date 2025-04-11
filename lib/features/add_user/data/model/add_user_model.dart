@@ -1,24 +1,17 @@
-class AddUserModel {
-  final String name;
-  final String email;
-  final String company;
-  final String phonenumber;
-  final String address;
-  final String website;
-  final String username;
+import 'package:user_directory/features/add_user/domain/entities/adduser.dart';
 
-  // Optional: If you're generating ID on server side, you can omit this in POST
-  final String? id;
+class AddUserModel extends AddUser{
+
 
   AddUserModel({
-    required this.name,
-    required this.email,
-    required this.company,
-    required this.phonenumber,
-    required this.address,
-    required this.website,
-    required this.username,
-    this.id,
+    required super.name,
+    required super.email,
+    required super.company,
+    required super.phonenumber,
+    required super.address,
+    required super.website,
+    required super.username,
+
   });
 
   // Convert model to JSON (for POST request)
@@ -31,21 +24,9 @@ class AddUserModel {
       'address': address,
       'website': website,
       'username': username,
-      if (id != null) 'id': id, // include if present
+       // include if present
     };
   }
 
-  // (Optional) From JSON - if you need it later
-  factory AddUserModel.fromJson(Map<String, dynamic> json) {
-    return AddUserModel(
-      name: json['name'],
-      email: json['email'],
-      company: json['company'],
-      phonenumber: json['phonenumber'],
-      address: json['address'],
-      website: json['website'],
-      username: json['username'],
-      id: json['id'],
-    );
-  }
+
 }

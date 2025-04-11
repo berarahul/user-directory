@@ -27,7 +27,7 @@ class UserProvider with ChangeNotifier {
 
     try {
       _users = await fetchUsersUsecase();
-      _filteredUsers = _users; // ✅ Also update filtered list
+      _filteredUsers = _users;
     } catch (e) {
       _error = e.toString();
     }

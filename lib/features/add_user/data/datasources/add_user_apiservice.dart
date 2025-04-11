@@ -1,8 +1,3 @@
-// data/datasource/user_remote_datasource.dart
-
-
-
-
 import 'package:http/http.dart' as http;
 
 import '../../../../core/constant/app_linker.dart';
@@ -15,7 +10,6 @@ class AddUserApiservice {
 
   Future<void> addUser(AddUserModel adduser) async {
     final response = await client.post(
-      // 👇 Print the raw response body
 
       Uri.parse("https://67f6cb5242d6c71cca6350be.mockapi.io/users"),
       headers: {"Content-Type": "application/json"},

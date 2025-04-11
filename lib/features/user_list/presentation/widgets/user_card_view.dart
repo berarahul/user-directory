@@ -17,7 +17,7 @@ class UserCardView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       child: SizedBox(
-        width: double.infinity, // 👈 This makes card full width
+        width: double.infinity,
         child: Card(
           color: Colors.grey,
           elevation: 5,

@@ -14,18 +14,14 @@ class UserModel extends User {
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
-      id: int.tryParse(json['id'].toString()) ?? 0,
+      id: json['id'] ?? '',
       name: json['name'] ?? '',
       email: json['email'] ?? '',
-      company: json['company'] is Map<String, dynamic>
-          ? json['company']['name'] ?? ''
-          : json['company'] ?? '',
+      company: json['company'] ?? '',
       username: json['username'] ?? '',
       phonenumber: json['phonenumber'] ?? '',
       website: json['website'] ?? '',
       address: json['address'] ?? '',
     );
   }
-
-
 }

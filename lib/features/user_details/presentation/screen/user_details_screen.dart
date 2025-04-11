@@ -11,9 +11,10 @@ class UserDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text("User Details"),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.grey[200],
       ),
       body: Column(
         children: [

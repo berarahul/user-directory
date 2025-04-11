@@ -81,9 +81,6 @@ class UserListScreen extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (context) =>  AddUserScreen()),
           );
-
-
-
         },
         child: const Icon(Icons.add),
       ),

@@ -1,4 +1,4 @@
-// domain/entities/user_entity.dart
+
 class AddUser {
 
   final String name;
